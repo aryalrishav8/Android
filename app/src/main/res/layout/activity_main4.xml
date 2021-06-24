@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity4">
+    <!-- First  row -->
+    <TableRow>
+        <TextView
+            android:text="hello"
+            android:padding="3dp"
+            android:width="140dp"
+            android:layout_column="1"
+            />
+        <TextView
+            android:text="there"
+            android:width="140dp"
+            android:gravity="centre"
+            android:padding="3dip"/>
+        <TextView
+            android:text="sup"
+            android:padding="3dp"
+           android:width="130dp"
+            />
+    </TableRow>
+    <!-- contents of second row -->
+    <TableRow>
+        <TextView
+            android:text="second row"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="3dp"
+            android:layout_column="1"/>
+        <TextView
+            android:text="second row2"
+            android:layout_width="match_parent"
+            android:padding="3dp"
+             />
+        <TextView
+            android:text="second row3"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            />
+    </TableRow>
+    <!-- image here -->
+    <TableRow
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/android" />
+
+</TableLayout>
+
+
+
+
+
