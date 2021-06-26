@@ -6,10 +6,16 @@
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:roundIcon="@mipmap/and"
         android:supportsRtl="true"
         android:theme="@style/Theme.MyApplication">
-        <activity android:name=".framelayout2"></activity>
+        <activity android:name=".MainActivity6"></activity>
+        <activity
+            android:name=".MainActivity5"
+            android:label="@string/title_activity_main5"
+            android:theme="@style/Theme.MyApplication.NoActionBar" />
+        <activity android:name=".event" />
+        <activity android:name=".framelayout2" />
         <activity android:name=".Framelayout1Activity" />
         <activity android:name=".MainActivity4" />
         <activity android:name=".MainActivity3" />
