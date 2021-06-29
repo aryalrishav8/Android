@@ -19,7 +19,7 @@ public class MainActivity extends AppCompatActivity {
         linearLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, MainActivity2.class)
+                Intent intent = new Intent(MainActivity.this, MainActivity2.class);
                         startActivity(intent);
             }
         });
@@ -27,6 +27,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, MainActivity3.class);
+                intent.putExtra("destination", "Linear layout passed form here");
                 startActivity(intent);
             }
         });

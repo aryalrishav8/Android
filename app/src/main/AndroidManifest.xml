@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/and"
         android:supportsRtl="true"
         android:theme="@style/Theme.MyApplication">
-        <activity android:name=".MainActivity6"></activity>
+        <activity android:name=".Card_view"></activity>
+        <activity android:name=".MainActivity6" />
         <activity
             android:name=".MainActivity5"
             android:label="@string/title_activity_main5"
