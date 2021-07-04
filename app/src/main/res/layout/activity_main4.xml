@@ -16,7 +16,6 @@
         <TextView
             android:text="there"
             android:width="140dp"
-            android:gravity="centre"
             android:padding="3dip"/>
         <TextView
             android:text="sup"
@@ -46,7 +45,7 @@
     <!-- image here -->
     <TableRow
         android:layout_width="wrap_content"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"/>
 
     <ImageView
         android:layout_width="wrap_content"

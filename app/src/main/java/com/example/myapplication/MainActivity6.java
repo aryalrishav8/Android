@@ -28,7 +28,8 @@ public class MainActivity6<button> extends AppCompatActivity {
             public void onClick(View v) {
                 Editable inputText =inputField.getText();
                         text.setText(inputText);
-                Toast.makeText(Relativelayout.this, inputText + "has been displayed");
+                Toast toast = Toast.makeText(Relativelayout.this,
+                        inputText + "has been displayed");
             }
         });
 

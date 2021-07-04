@@ -1,36 +1,84 @@
 package com.example.myapplication;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 
 public class MainActivity extends AppCompatActivity {
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        Button linearLayout = findViewById(R.id.linearLayoutButton);
+        Button relativeLayout = findViewById(R.id.relativeLayoutButton);
+        Button listView = findViewById(R.id.listViewButton);
+        Button cardViewSpinner = findViewById(R.id.cardViewSpinnerButton);
+        Button recyclerView = findViewById(R.id.recyclerViewButton);
+        Button navigation = findViewById(R.id.navigationButton);
+        Button booksRecyclerView = findViewById(R.id.bookRecyclerViewButton);
 
-        Button linearLayout = findViewById(R.id.LinearLayout1);
-        Button relativeLayout = findViewById(R.id.RelativeLayout1);
+
         linearLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, MainActivity2.class);
-                        startActivity(intent);
+                Intent linearIntent = new Intent(MainActivity.this, LinearLayout.class);
+                linearIntent.putExtra("destination", "Linear Layout Passed from Intent");
+                startActivity(linearIntent);
             }
         });
-        relativeLayout.setOnClickListener(new View.OnClickListener() {
+        relativeLayout.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, MainActivity3.class);
-                intent.putExtra("destination", "Linear layout passed form here");
+                Intent intent = new Intent(MainActivity.this, RelativeLayout.class);
+                startActivity(intent);
+            }
+        });
+        listView.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, ListViewExample.class);
+                startActivity(intent);
+            }
+        });
+        cardViewSpinner.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, CardViewSpinner.class);
+                startActivity(intent);
+            }
+        });
+        recyclerView.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, RecyclerView.class);
+                startActivity(intent);
+            }
+        });
+        navigation.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, NavigationHost.class);
+                startActivity(intent);
+            }
+        });
+
+        booksRecyclerView.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, BookActivity.class);
                 startActivity(intent);
             }
         });
 
     }
+
+
 }
+

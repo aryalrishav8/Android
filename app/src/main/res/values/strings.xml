@@ -6,7 +6,15 @@
     <string name="first_fragment_label">First Fragment</string>
     <string name="second_fragment_label">Second Fragment</string>
     <string name="next">Next</string>
+    <string name="linear_layout">Linear Layout</string>
+    <string name="card_view_spinner">Card View &amp; Spinner</string>
+    <string name="relative_layout">Relative Layout</string>
     <string name="previous">Previous</string>
+    <string name="list_view">List View Example</string>
+    <string name="power_workshop">Power Workshop 2021</string>
+    <string name="recycler_view">Recycler View</string>
+    <string name="navigation">Navigation/Fragments</string>
+    <string name="bookView">Book Recycler View</string>
 
     <string name="hello_first_fragment">Hello first fragment</string>
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
