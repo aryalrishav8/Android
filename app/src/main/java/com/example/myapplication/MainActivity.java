@@ -3,82 +3,49 @@ package com.example.myapplication;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-
+import android.app.Activity;
+import android.view.Menu;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.LinearLayout;
+import android.widget.EditText;
+import android.widget.TextView;
+import android.widget.Toast;
 import android.widget.RelativeLayout;
 
 public class MainActivity extends AppCompatActivity {
+    Button btnReg;
+    TextView result;
+    EditText edtFirst, edtLast, edtUser, edtPass, edtConfPass, edtEmail;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Button linearLayout = findViewById(R.id.linearLayoutButton);
-        Button relativeLayout = findViewById(R.id.relativeLayoutButton);
-        Button listView = findViewById(R.id.listViewButton);
-        Button cardViewSpinner = findViewById(R.id.cardViewSpinnerButton);
-        Button recyclerView = findViewById(R.id.recyclerViewButton);
-        Button navigation = findViewById(R.id.navigationButton);
-        Button booksRecyclerView = findViewById(R.id.bookRecyclerViewButton);
+        //initialization of all editText
+        edtFirst = (EditText) findViewById(R.id.edtfirstname);
+        edtLast = (EditText) findViewById(R.id.edtlastname);
+        edtUser = (EditText) findViewById(R.id.edtUsername);
+        edtPass = (EditText) findViewById(R.id.edtPass);
+        edtConfPass = (EditText) findViewById(R.id.edtConfirmPass);
+        edtEmail = (EditText) findViewById(R.id.edtEmail);
+        //Initialization of Register Button
+        btnReg = (Button) findViewById(R.id.button1);
+
+        //Registration button functionality
+        btnReg.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View view) {
+                String fname = edtFirst.getText().toString();
+                String password = edtPass.getText().toString();
+                result.setText("Name: \t" + fname + "\nPassword:\t" + password);
+            }
 
 
-        linearLayout.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent linearIntent = new Intent(MainActivity.this, LinearLayout.class);
-                linearIntent.putExtra("destination", "Linear Layout Passed from Intent");
-                startActivity(linearIntent);
-            }
         });
-        relativeLayout.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, RelativeLayout.class);
-                startActivity(intent);
-            }
-        });
-        listView.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, ListViewExample.class);
-                startActivity(intent);
-            }
-        });
-        cardViewSpinner.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, CardViewSpinner.class);
-                startActivity(intent);
-            }
-        });
-        recyclerView.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, RecyclerView.class);
-                startActivity(intent);
-            }
-        });
-        navigation.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, NavigationHost.class);
-                startActivity(intent);
-            }
-        });
-
-        booksRecyclerView.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, BookActivity.class);
-                startActivity(intent);
-            }
-        });
-
     }
-
-
 }
-
